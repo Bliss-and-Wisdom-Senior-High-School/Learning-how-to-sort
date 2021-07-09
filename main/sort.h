@@ -156,6 +156,10 @@ void quick_sort(int *arr,int front,int end){
 
 void InsertionSort(int arr[], int len){
 	int i, preIndex, n;
+	clock_t start, end1;
+	printf("quick sort : ");
+	start = clock();
+	
 	for(i = 1; i < len; i++){
 		preIndex=i-1;
 		n=arr[i];
@@ -165,5 +169,8 @@ void InsertionSort(int arr[], int len){
 		}
 		arr[preIndex+1]=n;
 	}
+	end1 = clock();
+	float time_used = (float) (end1-start)/CLK_TCK;
+	printf("%.3f\n",time_used);
 }
 
