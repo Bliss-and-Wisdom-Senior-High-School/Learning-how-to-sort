@@ -137,8 +137,8 @@ void quicksort(int *array, int front, int end){
         }
         i++;
         swap(&array[i], &array[end]);
-        quicksort(array, front, pivot - 1);
-        quicksort(array, pivot + 1, end);
+        quicksort(array, front, i - 1);
+        quicksort(array, i + 1, end);
     }
 }
 
