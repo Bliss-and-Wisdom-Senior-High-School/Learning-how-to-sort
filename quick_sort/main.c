@@ -21,8 +21,8 @@ void QuickSort(int *array, int front, int end){
         }
         i++;
         swap(&array[i], &array[end]);
-        QuickSort(array, front, pivot - 1);
-        QuickSort(array, pivot + 1, end);
+        QuickSort(array, front, i - 1);
+        QuickSort(array, i + 1, end);
     }
 }
 
