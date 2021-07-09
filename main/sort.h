@@ -63,9 +63,9 @@ void merge(int *arr,int left,int mid ,int right){
 		
 		int i, j;
 		for (i = 0; i < mid - left + 1; i++)
-	        left_arr[i] = arr[left + i];
-	    for (j = 0; j < right - mid; j++)
-	        right_arr[j] = arr[mid + 1 + j];
+	        	left_arr[i] = arr[left + i];
+	   	for (j = 0; j < right - mid; j++)
+	        	right_arr[j] = arr[mid + 1 + j];
 		
 		int left_index = 0;
 		int right_index = 0;
