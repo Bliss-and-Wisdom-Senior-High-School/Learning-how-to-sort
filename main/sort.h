@@ -153,3 +153,17 @@ void quick_sort(int *arr,int front,int end){
 	float time_used = (float) (end1-start)/CLK_TCK;
 	printf("%.3f\n",time_used);
 }
+
+void InsertionSort(int arr[], int len){
+	int i, preIndex, n;
+	for(i = 1; i < len; i++){
+		preIndex=i-1;
+		n=arr[i];
+		while(n < arr[preIndex] && preIndex >= 0){
+			arr[preIndex+1]=arr[preIndex];
+			preIndex-=1;
+		}
+		arr[preIndex+1]=n;
+	}
+}
+
