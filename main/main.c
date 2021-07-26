@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {	
 	
-	int array_size = 100000;
+	int array_size = 1000000000;
 	srand((unsigned int)time(NULL));
 	
 	int array1[array_size];
@@ -21,10 +21,9 @@ int main(int argc, char *argv[])
 		array2[i] = a;
 		printf("%d \n",array2[i]);	
 	}
-	
-	bubble_sort(array2,array_size);
-	//merge_sort(array2, 0, array_size);
-	quick_sort(array1, 0,array_size-1);
+	//bubble_sort(array2,array_size);//ok
+	//merge_sort(array2, 0, array_size); something wrong
+	//quick_sort(array1, 0,array_size-1);something wrong
 	
 	
 	return 0;
