@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("%d \n",array2[i]);	
 	}
 	
-	//bubble_sort(array2,array_size);
+	bubble_sort(array2,array_size);
 	//merge_sort(array2, 0, array_size);
 	quick_sort(array1, 0,array_size-1);
 	
