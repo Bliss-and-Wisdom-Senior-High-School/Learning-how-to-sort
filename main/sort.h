@@ -3,8 +3,16 @@
 #include <time.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-
+/*declear function here.😅*/
+void swap(int *a, int *b);
+void bubble_sort(int *array, int len);
+void selection_sort(int* arr, int len);
+void merge(int *arr,int left,int mid ,int right);
+void mergesort(int arr[], int left, int right);
+void merge_sort(int arr[], int left, int right);
+void quicksort(int *array, int front, int end);
+void quicksort(int *array, int front, int end);
+void insertion_sort(int arr[], int len);
 
 void swap(int *a, int *b){
 	int temp=*a;
@@ -27,7 +35,7 @@ void bubble_sort(int *array, int len){
 	}
 	
 	end = clock();
-	float time_used = (float) (end-start)/CLK_TCK;
+	float time_used = (float) (end-start)/CLOCKS_PER_SEC;
 	printf("%.3f\n",time_used);
 }
 
@@ -50,7 +58,7 @@ void selection_sort(int *arr, int len){
 	}
 	end = clock();
 	
-	float time_used = (float) (end-start)/CLK_TCK;
+	float time_used = (float) (end-start)/CLOCKS_PER_SEC;
 	printf("%.3f\n",time_used);
 }
 
@@ -120,15 +128,16 @@ void merge_sort(int arr[], int left, int right){
 	mergesort(arr, left, right);
 	
 	end = clock();
-	float time_used = (float) (end-start)/CLK_TCK;
+	float time_used = (float) (end-start)/CLOCKS_PER_SEC;
 	printf("%.3f\n",time_used);
 }
 
+
 void quicksort(int *array, int front, int end){
-	int j, pivot, i;
+	int j;
     if (front < end) {
-        pivot = array[end];
-        i = front -1;
+        int pivot = array[end];
+        int i = front -1;
         for (j = front; j < end; j++) {
             if (array[j] < pivot) {
                 i++;
@@ -150,11 +159,11 @@ void quick_sort(int *arr,int front,int end){
 	quicksort(arr, front, end);
 	
 	end1 = clock();
-	float time_used = (float) (end1-start)/CLK_TCK;
+	float time_used = (float) (end1-start)/CLOCKS_PER_SEC;
 	printf("%.3f\n",time_used);
 }
 
-void InsertionSort(int arr[], int len){
+void insertion_sort(int arr[], int len){
 	int i, preIndex, n;
 	clock_t start, end1;
 	printf("quick sort : ");
@@ -170,7 +179,7 @@ void InsertionSort(int arr[], int len){
 		arr[preIndex+1]=n;
 	}
 	end1 = clock();
-	float time_used = (float) (end1-start)/CLK_TCK;
+	float time_used = (float) (end1-start)/CLOCKS_PER_SEC;
 	printf("%.3f\n",time_used);
 }
 
