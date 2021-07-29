@@ -166,7 +166,7 @@ void quick_sort(int *arr,int front,int end){
 void insertion_sort(int arr[], int len){
 	int i, preIndex, n;
 	clock_t start, end1;
-	printf("quick sort : ");
+	printf("insertion sort : ");
 	start = clock();
 	
 	for(i = 1; i < len; i++){

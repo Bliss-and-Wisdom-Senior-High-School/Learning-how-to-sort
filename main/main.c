@@ -21,13 +21,29 @@ int main(int argc, char *argv[])
 		array2[i] = a;
 		printf("%d \n",array2[i]);	
 	}
-	/*
-	bubble_sort(array2,array_size);//ok
-	merge_sort(array2, 0, array_size); //ok
-	quick_sort(array1, 0,array_size-1);//ok
-	insertion_sort(array1,array_size);
-	selection_sort(array2, array_size);
+	
+	bubble_sort(array1,array_size);//ok
 
-	*/
+	for (i = 0; i < array_size; i++){
+		array1[i] = array2[i];
+	}
+	merge_sort(array1, 0, array_size); //ok
+
+	for (i = 0; i < array_size; i++){
+		array1[i] = array2[i];
+	}
+	quick_sort(array1, 0,array_size-1);//ok
+
+	for (i = 0; i < array_size; i++){
+		array1[i] = array2[i];
+	}
+	insertion_sort(array1,array_size);//ok
+
+	for (i = 0; i < array_size; i++){
+		array1[i] = array2[i];
+	}
+	selection_sort(array1, array_size);//ok
+
+	system("pause");
 	return 0;
 }
