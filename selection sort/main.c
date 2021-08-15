@@ -22,3 +22,18 @@ void selection_sort(int *arr, int len){
 	}
 }
 
+int main(int argc, char *argv[]){
+    int arr[10] =  {1,5,9,3,6,8,2,4,7};
+    int i;
+	for(i = 0; i < 10;i++){
+		printf("%d",arr[i]);
+	}
+	printf("\n");
+	
+	selection_sort(arr,10);
+	
+	for(i = 0; i < 10;i++){
+		printf("%d",arr[i]);
+	}
+    return 0;
+}
